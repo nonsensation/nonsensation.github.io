@@ -1,0 +1,28 @@
+description: >
+  Jekyll theme for nonsensation.com
+
+site_url: localhost:4000
+baseurl: ""
+
+title: nonsensation
+author:
+  name: nonsensation
+  email: 3li@nonsensation.com
+
+permalink: /:title
+
+kramdown:
+  auto_ids: true
+  syntax_highlighter_opts:
+    default_lang: php
+    span:
+      default_lang: text
+    block:
+      default_lang: php
+
+collections:
+  projects:
+    output: true
+    permalink: /Projects/:path
+
+livereload: true

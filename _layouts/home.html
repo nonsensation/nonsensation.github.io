@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% include intro.html %}
+
+{% assign items = site.posts | slice: 0 , 2 %}
+{% assign item_title = "Latest Blog Posts" %}
+{% include itemroll.html %}
+
+<div class="vertical"></div>
+
+{% assign items = site.projects | slice: 0 , 2 %}
+{% assign item_title = "Latest Projects" %}
+{% include itemroll.html %}

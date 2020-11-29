@@ -1,0 +1,15 @@
+- text: Home
+  url: /
+  color: white
+
+- text: Blog
+  url: /Blog
+  color: tomato
+
+- text: Projects
+  url: /Projects
+  color: cyan
+
+- text: About
+  url: /About
+  color: yellow

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+
+{% if site.intro %}
+	<div class="intro">
+	  <div class="intro-text">
+	    <h1 class="line anim-typewriter">{{site.intro}}</h1>
+	  </div>
+	</div>
+
+	<div class="scroll-down"></div>
+{% endif %}
+
+<div class="page-content">
+    {{ content }}
+</div>

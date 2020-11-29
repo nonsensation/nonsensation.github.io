@@ -1,0 +1,20 @@
+
+<header>
+    <div class="logo">
+        <a href="/">{{site.title}}</a>
+    </div>
+    <nav>
+        <div class=flexbox>
+            {% for item in site.data.navigation %}
+
+            <div class="box">
+                <a href="{{item.url | relative_url}}" title="{{item.url}}">
+                    <span class="dot col-{{item.color}}">.</span>
+                    {{item.text}}
+                </a>
+            </div>
+
+            {% endfor %}
+        </div>
+    </nav>
+</header>

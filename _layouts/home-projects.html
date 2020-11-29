@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% include intro.html %}
+
+{% assign items = site.projects | where: "is_project_base" , true %}
+{% assign item_title = "Projects" %}
+{% include itemroll.html %}
+
+<div class="vertical"></div>

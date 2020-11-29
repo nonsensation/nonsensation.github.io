@@ -1,0 +1,16 @@
+
+- text: yt
+  url: https://youtube.com/nonsensation
+  color: red
+
+- text: gh
+  url: https://github.com/nonsensation
+  color: orange
+
+- text: ttv
+  url: https://twitch.tv/nonsensation
+  color: magenta
+
+- text: tw
+  url: https://twitter.com/_nonsensation
+  color: cyan

@@ -1,0 +1,20 @@
+
+<footer>
+    <div class="flexbox">
+        <div class="box">
+            <div class="top">Find me on:</div>
+            <div class="bot">
+                {% for item in site.data.social %}
+                    <a class="social" href="{{item.url}}" title="{{item.url}}">
+                        <span class="dot col-{{item.color}}">.</span>
+                        {{item.text}}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="box">
+            <div class="top">Contact me:</div>
+            <div class="bot">{{site.author.email}}</div>
+        </div>
+    </div>
+</footer>

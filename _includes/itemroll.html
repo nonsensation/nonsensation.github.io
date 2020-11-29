@@ -1,0 +1,32 @@
+<div class="projects">
+
+<h2>{{item_title}}</h2>
+
+<div class="vertical"></div>
+
+<div class="prj-list">
+
+    {% for item in items %}
+
+        <div class="prj">
+            
+        {% assign url = item.url | relative_url %}
+        {% if item.ext_url %}
+            {% assign url = item.ext_url %}
+        {% endif %}
+
+        <a href="{{ url }}">
+            <div class="prj-title">{{item.title}}</div>
+            {% if item.img_url %}
+                <div class="prj-img">
+                <img src="{{item.img_url}}">
+                </div>
+            {% endif %}
+            <div class="prj-txt">{{item.excerpt}}</div>
+        </a>
+        </div>
+
+    {% endfor %}
+
+</div>
+</div>
