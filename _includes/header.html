@@ -1,8 +1,9 @@
 
 <header>
-    <div class="logo">
-        <a href="/">{{site.title}}</a>
-    </div>
+    <a href="/" class="head">
+        <img class="logo" src="assets/logo.png">
+        <span class="title">{{site.title}}</span>        
+    </a>
     <nav>
         <div class=flexbox>
             {% for item in site.data.navigation %}
