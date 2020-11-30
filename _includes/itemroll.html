@@ -10,20 +10,20 @@
 
         <div class="prj">
             
-        {% assign url = item.url | relative_url %}
-        {% if item.ext_url %}
-            {% assign url = item.ext_url %}
-        {% endif %}
-
-        <a href="{{ url }}">
-            <div class="prj-title">{{item.title}}</div>
-            {% if item.img_url %}
-                <div class="prj-img">
-                <img src="{{item.img_url}}">
-                </div>
+            {% assign url = item.url | relative_url %}
+            {% if item.ext_url %}
+                {% assign url = item.ext_url %}
             {% endif %}
-            <div class="prj-txt">{{item.excerpt}}</div>
-        </a>
+
+            <a href="{{ url }}">
+                <div class="prj-title">{{item.title}}</div>
+                {% if item.img_url %}
+                    <div class="prj-img">
+                    <img src="{{item.img_url}}">
+                    </div>
+                {% endif %}
+                <div class="prj-txt">{{item.excerpt}}</div>
+            </a>
         </div>
 
     {% endfor %}

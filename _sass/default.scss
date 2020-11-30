@@ -3,6 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
 
+$color-pairs: (
+    "y": ["orange","gold"] ,
+    "r": ["crimson","red"] ,
+    "b": ["cyan","teal"] ,
+    "g": ["springgreen","lime"] ,
+    "p": ["indigo","purple"]
+  );
+
+:root {
+  --random-color1: white; 
+  --random-color2: white; 
+}
+
 html,
 body {
     margin: 0;
@@ -70,8 +83,9 @@ header .logo {
 }
 
 a:hover {
-  animation: pulse 0.8s infinite;
+  /*animation: pulseText 0.8s infinite;*/
 }
+
 
 .line {
   top: 50%;
@@ -122,15 +136,62 @@ a:hover {
   }
 }
 
-@keyframes pulse {
+@keyframes pulseText {
   50% {
       color: orange;
+      color: crimson;
   }
 
   from ,to {
-      color: white;
+      color: lightyellow;
+      color: red;
   }
 }
+
+/*@keyframes pulseBorder {
+  60% {
+      border-color: orange;
+      border-color: crimson;
+      border-color: cyan;
+      border-color: springgreen;
+      border-color: indigo;
+      border-color: var(--random-color1);
+  }
+
+  from ,to {
+      border-color: gold;
+      border-color: red;
+      border-color: teal;
+      border-color: lime;
+      border-color: purple;
+      border-color: var(--random-color2);
+  }
+}*/
+
+@keyframes pulseBorder1 { 60% { border-color: orange; }      from ,to { border-color: gold; } }
+@keyframes pulseBorder2 { 60% { border-color: crimson; }     from ,to { border-color: red; } }
+@keyframes pulseBorder3 { 60% { border-color: cyan; }        from ,to { border-color: teal; } }
+@keyframes pulseBorder4 { 60% { border-color: springgreen; } from ,to { border-color: lime; } }
+@keyframes pulseBorder5 { 60% { border-color: indigo; }      from ,to { border-color: purple; } }
+
+@keyframes pulseText1 { 60% { color: orange; }      from ,to { color: gold; } }
+@keyframes pulseText2 { 60% { color: crimson; }     from ,to { color: red; } }
+@keyframes pulseText3 { 60% { color: cyan; }        from ,to { color: teal; } }
+@keyframes pulseText4 { 60% { color: springgreen; } from ,to { color: lime; } }
+@keyframes pulseText5 { 60% { color: indigo; }      from ,to { color: purple; } }
+
+.pulseText1:hover { animation: pulseText1 0.8s infinite; }
+.pulseText2:hover { animation: pulseText2 0.8s infinite; }
+.pulseText3:hover { animation: pulseText3 0.8s infinite; }
+.pulseText4:hover { animation: pulseText4 0.8s infinite; }
+.pulseText5:hover { animation: pulseText5 0.8s infinite; }
+
+.pulseBorder1:hover { animation: pulseBorder1 0.8s infinite; }
+.pulseBorder2:hover { animation: pulseBorder2 0.8s infinite; }
+.pulseBorder3:hover { animation: pulseBorder3 0.8s infinite; }
+.pulseBorder4:hover { animation: pulseBorder4 0.8s infinite; }
+.pulseBorder5:hover { animation: pulseBorder5 0.8s infinite; }
+
 
 .intro {
   height: 85vh;
@@ -192,9 +253,9 @@ a:hover {
 .prj-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: min( 5% , 50px );
     justify-content: space-between;
-    margin-top: -30px;
+    margin-top: -20px;
 }
 
 .prj-title {
@@ -204,18 +265,20 @@ a:hover {
 }
 
 .prj {
-    flex: 1 1 350px;
+    flex: 1 1 max( 350px , 10% );
     display: flex;
     flex-direction: column;
-    text-align: center;    
-    margin-top: 30px;
+    text-align: center;        
     padding: 1%;
-    border: 1px solid transparent;
+    border: 2px dashed rgba( 255,255,255,0.0);
+    max-width: 1024px;
+    margin: 20px auto;
 }
 
 .prj:hover {
-    border-color: white;
-    transition: 2s;
+    border-color: rgba( 255,255,255,0.25);
+    transition: 1.5s;
+    /*animation: pulseBorder 0.8s infinite;*/
 }
 
 .prj-txt, .page-content {
@@ -231,6 +294,7 @@ a:hover {
 .prj a {
     text-decoration: none;
     color: white;
+    margin: auto;
 }
 
 .prj-img img {
