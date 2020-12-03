@@ -7,23 +7,30 @@
 
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
+  <meta name=”description” content="Full-Stack Developer and Digital Product Manager, based in Shanghai, China"> 
+<meta name=”keywords” content="Maria Schuessler, developer,Ruby on Rails, RoR,HTML,JavaScript"> 
+<meta name="author" content="Maria Schuessler">
+
   <meta name="author" content="{{site.title}}">
 
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$']],
-        displayMath: [['//[', '//]'],['//(', '//)']],
-        processEscapes: true,
-        processEnvironments: true
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
-    </script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-    </script>
+  {% if page.mathjax == true %}
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$']],
+          displayMath: [['//[', '//]'],['//(', '//)']],
+          processEscapes: true,
+          processEnvironments: true
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      </script>
+      <script type="text/javascript" id="MathJax-script"
+        async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+  {% endif %}
 
   <title>{{site.title}}</title>
 

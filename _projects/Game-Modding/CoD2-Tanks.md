@@ -1,7 +1,7 @@
 ---
 layout: project
-project: "cod2-tanks"
-is_project_base: true
+project: "game-modding"
+is_project_base: false
 
 title: Call of Duty 2 Tanks
 ext_url: https://github.com/nonsensation/CoD2-Tank-Mod

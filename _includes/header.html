@@ -2,14 +2,14 @@
 <header>
     <a href="/" class="head">
         <img class="logo" src="/assets/logo.png">
-        <span class="title">{{site.title}}</span>        
+        <span class="title">{{site.title}}</span>
     </a>
     <nav>
         <div class=flexbox>
             {% for item in site.data.navigation %}
 
             <div class="box">
-                <a href="{{item.url | relative_url}}" title="{{item.url}}">
+                <a class="link" href="{{item.url | relative_url}}" title="{{item.text}}">
                     <span class="dot col-{{item.color}}">.</span>
                     {{item.text}}
                 </a>

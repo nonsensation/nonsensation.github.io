@@ -2,14 +2,14 @@
   url: /
   color: white
 
-- text: Blog
-  url: /Blog
-  color: tomato
-
 - text: Projects
   url: /Projects
   color: cyan
 
+- text: Blog
+  url: /Blog
+  color: magenta
+
 - text: About
   url: /About
-  color: yellow
+  color: orange

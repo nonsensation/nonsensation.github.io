@@ -10,6 +10,6 @@ layout: default
 
 <div class="vertical"></div>
 
-{% assign items = site.projects | slice: 0 , 2 %}
+{% assign items = site.projects | where: "is_project_base" , true | slice: 0 , 2 %}
 {% assign item_title = "Latest Projects" %}
 {% include itemroll.html %}
