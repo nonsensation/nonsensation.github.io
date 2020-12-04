@@ -46,6 +46,28 @@ Responsibility for the content of external links (to web pages of third parties)
 No violations were evident to us at the time of linking.  
 Should any legal infringement become known to us, we will remove the respective link immediately.
 
+```
+tbody tr:hover {
+  color: var(--col-txt-heading);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+pre, code {
+  font-family: 'Roboto Mono', monospace;
+}
+
+pre {
+  font-size: 80%;
+  background-color: var(--col-bg);
+  border: 1px solid var(--col-bg-accent);
+  padding: 20px;
+  overflow-x: auto;
+  border-radius: 5px;
+}
+```
+
+
 ###### Copyright
 Our web pages and their contents are subject to German copyright law.
 Unless expressly permitted by law, every form of utilizing, reproducing or processing works

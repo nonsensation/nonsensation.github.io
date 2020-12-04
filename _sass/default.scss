@@ -1,27 +1,58 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+// @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 
 // --->
-
 :root {
   --col-bg: #0f0f0f;
   --col-bg-accent: #181818;
   --col-accent: dimgrey;
-  --col-txt-heading: #ccc;
-  --col-txt: darkgrey;
+  --col-txt-heading: lightgrey;
+  --col-txt: grey;
   --col-txt-hover: teal;
+  --col-txt-highlight: dimgrey;
 }
 
-html,
-body {
+:root{
+  scrollbar-color: var(--col-txt-hover) var(--col-bg-accent);
+  scrollbar-width: thin !important;
+}
+
+* {
+  scrollbar-width: thin !important;
+}
+*::-webkit-scrollbar {
+  width: 0.75em;
+  height: 0.75em;
+}
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-button{
+  display:none;
+}
+*::-webkit-scrollbar-track-piece{
+  background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+  background-color: transparent;
+  border: 1px solid var(--col-txt-highlight);
+  border-radius:5px;
+}
+
+html,body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  // font-family: "Comfortaa" !important;
+  font-family: "Comfortaa";
   font-family: "Montserrat", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+
   font-weight: 400;
   font-size: 22px;
+
   background: var(--col-bg);
   color: var(--col-txt-heading) !important;
 }
@@ -93,7 +124,7 @@ header .logo {
   text-align: center;
   margin: auto;
   margin-top: 50px;
-  opacity: 70%;
+  opacity: 99%;
 }
 
 header .link {
@@ -200,21 +231,6 @@ header .link {
   }
 }
 
-// ---> colors
-
-.color-youtube {
-  color: red;
-}
-.color-twitch {
-  color: darkmagenta;
-}
-.color-twitter {
-  color: skyblue;
-}
-.color-github {
-  color: orange;
-}
-
 // ---> cards
 
 .card-list {
@@ -255,7 +271,7 @@ header .link {
 .card-txt,
 .page-content {
   font-size: 1em;
-  line-height: 1.8em;
+  line-height: 1.6em;
   color: var(--col-txt);
   text-align: justify;
 }
@@ -294,7 +310,7 @@ section h2 {
 .page-content {
   margin: 50px auto;
   width: 90vw;
-  text-align: justify;
+  // text-align: justify;
   overflow: auto;
 }
 
@@ -322,13 +338,13 @@ section h2 {
   margin: 50px auto;
   font-size: 1.5em;
   font-weight: 900;
-  text-decoration: 4px solid underline var(--col-accent);
+  text-decoration: 4px solid underline var(--col-txt-hover);
 }
 .page-content h3 {
   margin: 40px auto;
   font-weight: 700;
   font-size: 1.3em;
-  text-decoration: 2px solid underline var(--col-accent);
+  text-decoration: 2px solid underline var(--col-txt-hover);
 }
 .page-content h4 {
   font-size: 1em;
@@ -382,13 +398,19 @@ tbody tr:hover {
   color: var(--col-txt-heading);
 }
 
+pre, code {
+  font-family: 'Roboto Mono', monospace;
+  line-height: normal;
+}
+
 pre {
-  font-size: 80%;
-  background-color: var(--col-bg);
+  font-size: 75%;
+  background-color: transparent;
   border: 1px solid var(--col-bg-accent);
   padding: 20px;
   overflow-x: auto;
   border-radius: 5px;
+  scrollbar-color: dark;
 }
 
 // ---> footer
@@ -436,46 +458,3 @@ footer {
   font-size: 1.5em;
   opacity: 70%;
 }
-
-#svg-logo {
-  stroke: var(--col-txt-heading);
-  fill: transparent;
-  height: 30px;
-  fill-rule: evenodd;
-  
-}
-
-// var p = document.querySelectorAll('#svg-logo g path'); for(var i=0;i<p.length;i++){console.log(Math.ceil(p[i].getTotalLength()));}
-
-#svg-logo g {
-  fill-rule: evenodd;
-  animation: svg-logo-fill 1s ease forwards 4.0s;
-}
-#svg-logo g path {
-  fill-rule: evenodd;
-}
-
-@keyframes svg-logo-anim {
-  to {
-    stroke-dashoffset: 0%;
-  }
-}
-
-@keyframes svg-logo-fill {
-  to {
-    fill: var(--col-txt-heading);
-  }
-}
-
-#svg-logo g path:nth-child(1)  { stroke-dasharray: 287; stroke-dashoffset: 287; animation: svg-logo-anim 2s ease forwards 0.00s; }
-#svg-logo g path:nth-child(2)  { stroke-dasharray: 297; stroke-dashoffset: 297; animation: svg-logo-anim 2s ease forwards 0.25s; }
-#svg-logo g path:nth-child(3)  { stroke-dasharray: 287; stroke-dashoffset: 287; animation: svg-logo-anim 2s ease forwards 0.50s; }
-#svg-logo g path:nth-child(4)  { stroke-dasharray: 279; stroke-dashoffset: 279; animation: svg-logo-anim 2s ease forwards 0.75s; }
-#svg-logo g path:nth-child(5)  { stroke-dasharray: 344; stroke-dashoffset: 344; animation: svg-logo-anim 2s ease forwards 1.00s; }
-#svg-logo g path:nth-child(6)  { stroke-dasharray: 287; stroke-dashoffset: 287; animation: svg-logo-anim 2s ease forwards 1.25s; }
-#svg-logo g path:nth-child(7)  { stroke-dasharray: 279; stroke-dashoffset: 279; animation: svg-logo-anim 2s ease forwards 1.50s; }
-#svg-logo g path:nth-child(8)  { stroke-dasharray: 334; stroke-dashoffset: 334; animation: svg-logo-anim 2s ease forwards 1.75s; }
-#svg-logo g path:nth-child(9)  { stroke-dasharray: 222; stroke-dashoffset: 222; animation: svg-logo-anim 2s ease forwards 2.00s; }
-#svg-logo g path:nth-child(10) { stroke-dasharray: 152; stroke-dashoffset: 152; animation: svg-logo-anim 2s ease forwards 2.25s; }
-#svg-logo g path:nth-child(11) { stroke-dasharray: 297; stroke-dashoffset: 297; animation: svg-logo-anim 2s ease forwards 2.50s; }
-#svg-logo g path:nth-child(12) { stroke-dasharray: 287; stroke-dashoffset: 287; animation: svg-logo-anim 2s ease forwards 2.75s; }
