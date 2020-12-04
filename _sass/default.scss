@@ -81,7 +81,7 @@ header .title {
   font-weight: 200;
   letter-spacing: 0.75em;
   position: absolute;
-  top: -10%;
+  top: -15%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 50px;
@@ -148,7 +148,7 @@ header .link {
 }
 
 .intro {
-  height: 85vh;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -215,451 +215,9 @@ header .link {
   color: orange;
 }
 
-.col-aliceblue {
-  color: aliceblue;
-}
-.col-antiquewhite {
-  color: antiquewhite;
-}
-.col-aqua {
-  color: aqua;
-}
-.col-aquamarine {
-  color: aquamarine;
-}
-.col-azure {
-  color: azure;
-}
-.col-beige {
-  color: beige;
-}
-.col-bisque {
-  color: bisque;
-}
-.col-black {
-  color: black;
-}
-.col-blanchedalmond {
-  color: blanchedalmond;
-}
-.col-blue {
-  color: blue;
-}
-.col-blueviolet {
-  color: blueviolet;
-}
-.col-brown {
-  color: brown;
-}
-.col-burlywood {
-  color: burlywood;
-}
-.col-cadetblue {
-  color: cadetblue;
-}
-.col-chartreuse {
-  color: chartreuse;
-}
-.col-chocolate {
-  color: chocolate;
-}
-.col-coral {
-  color: coral;
-}
-.col-cornflowerblue {
-  color: cornflowerblue;
-}
-.col-cornsilk {
-  color: cornsilk;
-}
-.col-crimson {
-  color: crimson;
-}
-.col-cyan {
-  color: cyan;
-}
-.col-darkblue {
-  color: darkblue;
-}
-.col-darkcyan {
-  color: darkcyan;
-}
-.col-darkgoldenrod {
-  color: darkgoldenrod;
-}
-.col-darkgray {
-  color: darkgray;
-}
-.col-darkgrey {
-  color: darkgrey;
-}
-.col-darkgreen {
-  color: darkgreen;
-}
-.col-darkkhaki {
-  color: darkkhaki;
-}
-.col-darkmagenta {
-  color: darkmagenta;
-}
-.col-darkolivegreen {
-  color: darkolivegreen;
-}
-.col-darkorange {
-  color: darkorange;
-}
-.col-darkorchid {
-  color: darkorchid;
-}
-.col-darkred {
-  color: darkred;
-}
-.col-darksalmon {
-  color: darksalmon;
-}
-.col-darkseagreen {
-  color: darkseagreen;
-}
-.col-darkslateblue {
-  color: darkslateblue;
-}
-.col-darkslategray {
-  color: darkslategray;
-}
-.col-darkslategrey {
-  color: darkslategrey;
-}
-.col-darkturquoise {
-  color: darkturquoise;
-}
-.col-darkviolet {
-  color: darkviolet;
-}
-.col-deeppink {
-  color: deeppink;
-}
-.col-deepskyblue {
-  color: deepskyblue;
-}
-.col-dimgray {
-  color: dimgray;
-}
-.col-dimgrey {
-  color: dimgrey;
-}
-.col-dodgerblue {
-  color: dodgerblue;
-}
-.col-firebrick {
-  color: firebrick;
-}
-.col-floralwhite {
-  color: floralwhite;
-}
-.col-forestgreen {
-  color: forestgreen;
-}
-.col-fuchsia {
-  color: fuchsia;
-}
-.col-gainsboro {
-  color: gainsboro;
-}
-.col-ghostwhite {
-  color: ghostwhite;
-}
-.col-gold {
-  color: gold;
-}
-.col-goldenrod {
-  color: goldenrod;
-}
-.col-gray {
-  color: gray;
-}
-.col-grey {
-  color: grey;
-}
-.col-green {
-  color: green;
-}
-.col-greenyellow {
-  color: greenyellow;
-}
-.col-honeydew {
-  color: honeydew;
-}
-.col-hotpink {
-  color: hotpink;
-}
-.col-indianred {
-  color: indianred;
-}
-.col-indigo {
-  color: indigo;
-}
-.col-ivory {
-  color: ivory;
-}
-.col-khaki {
-  color: khaki;
-}
-.col-lavender {
-  color: lavender;
-}
-.col-lavenderblush {
-  color: lavenderblush;
-}
-.col-lawngreen {
-  color: lawngreen;
-}
-.col-lemonchiffon {
-  color: lemonchiffon;
-}
-.col-lightblue {
-  color: lightblue;
-}
-.col-lightcoral {
-  color: lightcoral;
-}
-.col-lightcyan {
-  color: lightcyan;
-}
-.col-lightgoldenrodyellow {
-  color: lightgoldenrodyellow;
-}
-.col-lightgray {
-  color: lightgray;
-}
-.col-lightgrey {
-  color: lightgrey;
-}
-.col-lightgreen {
-  color: lightgreen;
-}
-.col-lightpink {
-  color: lightpink;
-}
-.col-lightsalmon {
-  color: lightsalmon;
-}
-.col-lightseagreen {
-  color: lightseagreen;
-}
-.col-lightskyblue {
-  color: lightskyblue;
-}
-.col-lightslategray {
-  color: lightslategray;
-}
-.col-lightslategrey {
-  color: lightslategrey;
-}
-.col-lightsteelblue {
-  color: lightsteelblue;
-}
-.col-lightyellow {
-  color: lightyellow;
-}
-.col-lime {
-  color: lime;
-}
-.col-limegreen {
-  color: limegreen;
-}
-.col-linen {
-  color: linen;
-}
-.col-magenta {
-  color: magenta;
-}
-.col-maroon {
-  color: maroon;
-}
-.col-mediumaquamarine {
-  color: mediumaquamarine;
-}
-.col-mediumblue {
-  color: mediumblue;
-}
-.col-mediumorchid {
-  color: mediumorchid;
-}
-.col-mediumpurple {
-  color: mediumpurple;
-}
-.col-mediumseagreen {
-  color: mediumseagreen;
-}
-.col-mediumslateblue {
-  color: mediumslateblue;
-}
-.col-mediumspringgreen {
-  color: mediumspringgreen;
-}
-.col-mediumturquoise {
-  color: mediumturquoise;
-}
-.col-mediumvioletred {
-  color: mediumvioletred;
-}
-.col-midnightblue {
-  color: midnightblue;
-}
-.col-mintcream {
-  color: mintcream;
-}
-.col-mistyrose {
-  color: mistyrose;
-}
-.col-moccasin {
-  color: moccasin;
-}
-.col-navajowhite {
-  color: navajowhite;
-}
-.col-navy {
-  color: navy;
-}
-.col-oldlace {
-  color: oldlace;
-}
-.col-olive {
-  color: olive;
-}
-.col-olivedrab {
-  color: olivedrab;
-}
-.col-orange {
-  color: orange;
-}
-.col-orangered {
-  color: orangered;
-}
-.col-orchid {
-  color: orchid;
-}
-.col-palegoldenrod {
-  color: palegoldenrod;
-}
-.col-palegreen {
-  color: palegreen;
-}
-.col-paleturquoise {
-  color: paleturquoise;
-}
-.col-palevioletred {
-  color: palevioletred;
-}
-.col-papayawhip {
-  color: papayawhip;
-}
-.col-peachpuff {
-  color: peachpuff;
-}
-.col-peru {
-  color: peru;
-}
-.col-pink {
-  color: pink;
-}
-.col-plum {
-  color: plum;
-}
-.col-powderblue {
-  color: powderblue;
-}
-.col-purple {
-  color: purple;
-}
-.col-red {
-  color: red;
-}
-.col-rosybrown {
-  color: rosybrown;
-}
-.col-royalblue {
-  color: royalblue;
-}
-.col-saddlebrown {
-  color: saddlebrown;
-}
-.col-salmon {
-  color: salmon;
-}
-.col-sandybrown {
-  color: sandybrown;
-}
-.col-seagreen {
-  color: seagreen;
-}
-.col-seashell {
-  color: seashell;
-}
-.col-sienna {
-  color: sienna;
-}
-.col-silver {
-  color: silver;
-}
-.col-skyblue {
-  color: skyblue;
-}
-.col-slateblue {
-  color: slateblue;
-}
-.col-slategray {
-  color: slategray;
-}
-.col-slategrey {
-  color: slategrey;
-}
-.col-snow {
-  color: snow;
-}
-.col-springgreen {
-  color: springgreen;
-}
-.col-steelblue {
-  color: steelblue;
-}
-.col-tan {
-  color: tan;
-}
-.col-teal {
-  color: teal;
-}
-.col-thistle {
-  color: thistle;
-}
-.col-tomato {
-  color: tomato;
-}
-.col-turquoise {
-  color: turquoise;
-}
-.col-violet {
-  color: violet;
-}
-.col-wheat {
-  color: wheat;
-}
-.col-white {
-  color: white;
-}
-.col-whitesmoke {
-  color: whitesmoke;
-}
-.col-yellow {
-  color: yellow;
-}
-.col-yellowgreen {
-  color: yellowgreen;
-}
+// ---> cards
 
-// ---> projects
-
-.prj-list {
+.card-list {
   display: flex;
   flex-wrap: wrap;
   gap: min(5%, 50px);
@@ -667,14 +225,14 @@ header .link {
   margin-top: -20px;
 }
 
-.prj-title {
+.card-title {
   font-size: 1.5em;
   line-height: 1.8em;
   font-weight: 400;
   padding: 30px;
 }
 
-.prj {
+.card {
   flex: 1 1 max(400px, 20%);
   display: flex;
   flex-direction: column;
@@ -685,16 +243,16 @@ header .link {
   // background-color: #181818;
 }
 
-.prj:hover {
+.card:hover {
   border-color: var(--col-accent);
 }
 
-.prj,
+.card,
 .page-content {
   max-width: 1280px;
 }
 
-.prj-txt,
+.card-txt,
 .page-content {
   font-size: 1em;
   line-height: 1.8em;
@@ -702,21 +260,29 @@ header .link {
   text-align: justify;
 }
 
-.prj a {
+.card a {
   text-decoration: none;
   color: var(--col-txt-heading);
   margin: auto;
 }
 
-.prj-img img {
-  max-height: 300px;
-  margin: auto;
-  background-size: cover;
+.card-img {
   margin-bottom: 30px;
-  border-radius: 5px;
 }
 
-.projects h2 {
+.mask {
+  -webkit-mask-image: url(/assets/mask1.png);
+  -webkit-mask-image: url(/assets/mask2.png);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 100% 100%;
+  mask-image: url(/assets/mask2.png);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100% 100%;
+}
+
+section h2 {
   text-align: center;
   font-weight: 400;
   font-size: 1.5em;
@@ -870,3 +436,46 @@ footer {
   font-size: 1.5em;
   opacity: 70%;
 }
+
+#svg-logo {
+  stroke: var(--col-txt-heading);
+  fill: transparent;
+  height: 30px;
+  fill-rule: evenodd;
+  
+}
+
+// var p = document.querySelectorAll('#svg-logo g path'); for(var i=0;i<p.length;i++){console.log(Math.ceil(p[i].getTotalLength()));}
+
+#svg-logo g {
+  fill-rule: evenodd;
+  animation: svg-logo-fill 1s ease forwards 4.0s;
+}
+#svg-logo g path {
+  fill-rule: evenodd;
+}
+
+@keyframes svg-logo-anim {
+  to {
+    stroke-dashoffset: 0%;
+  }
+}
+
+@keyframes svg-logo-fill {
+  to {
+    fill: var(--col-txt-heading);
+  }
+}
+
+#svg-logo g path:nth-child(1)  { stroke-dasharray: 287; stroke-dashoffset: 287; animation: svg-logo-anim 2s ease forwards 0.00s; }
+#svg-logo g path:nth-child(2)  { stroke-dasharray: 297; stroke-dashoffset: 297; animation: svg-logo-anim 2s ease forwards 0.25s; }
+#svg-logo g path:nth-child(3)  { stroke-dasharray: 287; stroke-dashoffset: 287; animation: svg-logo-anim 2s ease forwards 0.50s; }
+#svg-logo g path:nth-child(4)  { stroke-dasharray: 279; stroke-dashoffset: 279; animation: svg-logo-anim 2s ease forwards 0.75s; }
+#svg-logo g path:nth-child(5)  { stroke-dasharray: 344; stroke-dashoffset: 344; animation: svg-logo-anim 2s ease forwards 1.00s; }
+#svg-logo g path:nth-child(6)  { stroke-dasharray: 287; stroke-dashoffset: 287; animation: svg-logo-anim 2s ease forwards 1.25s; }
+#svg-logo g path:nth-child(7)  { stroke-dasharray: 279; stroke-dashoffset: 279; animation: svg-logo-anim 2s ease forwards 1.50s; }
+#svg-logo g path:nth-child(8)  { stroke-dasharray: 334; stroke-dashoffset: 334; animation: svg-logo-anim 2s ease forwards 1.75s; }
+#svg-logo g path:nth-child(9)  { stroke-dasharray: 222; stroke-dashoffset: 222; animation: svg-logo-anim 2s ease forwards 2.00s; }
+#svg-logo g path:nth-child(10) { stroke-dasharray: 152; stroke-dashoffset: 152; animation: svg-logo-anim 2s ease forwards 2.25s; }
+#svg-logo g path:nth-child(11) { stroke-dasharray: 297; stroke-dashoffset: 297; animation: svg-logo-anim 2s ease forwards 2.50s; }
+#svg-logo g path:nth-child(12) { stroke-dasharray: 287; stroke-dashoffset: 287; animation: svg-logo-anim 2s ease forwards 2.75s; }
