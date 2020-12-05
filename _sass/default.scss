@@ -12,7 +12,7 @@
   --col-bg-highlight: #144552;
   --col-accent: dimgrey;
   --col-txt-heading: lightgrey;
-  --col-txt: grey;
+  --col-txt: DarkGray	;
   --col-txt-hover: teal;
   --col-txt-highlight: dimgrey;
 
@@ -21,7 +21,7 @@
   --border-radius: 3px;
 }
 
-[data-theme="dark"] {
+[data-theme="light"] {
   --col-bg: #f0f0f0;
   --col-bg-accent: #ddd;
   --col-bg-highlight: #fc6471;
@@ -74,8 +74,6 @@
 }
 
 *::-webkit-scrollbar {
-  // width: 0.75em;
-  // height: 0.75em;
   color: transparent;
 }
 *::-webkit-scrollbar-track,
