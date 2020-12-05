@@ -14,6 +14,7 @@ E-Mail: 3li@nonsensation.com
 ---
 
 This website does NOT use cookies, Google Adverts or other advertisements and aims to be as user-friendly as possible.
+To store the Dakr or Light theme, I use [local browser storage](https://www.w3schools.com/html/html5_webstorage.asp).  
 If you encounter any problems while browsing this website, please let me know: [mail@nonsensation.com](mailto://mail@nonsensation.com) or [`@_nonsensation` on Twitter](https://twitter.com/_nonsensation).
 
 ---
