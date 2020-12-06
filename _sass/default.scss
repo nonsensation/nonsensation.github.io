@@ -90,6 +90,7 @@
 }
 
 html,body {
+  word-break: break-all;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -164,6 +165,7 @@ header .title {
   transform: translate(-50%, -50%);
   margin-top: 50px;
   max-width: 100vw;
+  word-break: normal;
 }
 
 header .logo {
@@ -340,6 +342,10 @@ header .link {
   width: 100%;
 }
 
+.card-txt.page-content {
+  width: auto !important;
+}
+
 section h2 {
   text-align: center;
   font-weight: 400;
@@ -350,14 +356,14 @@ section h2 {
 // ---> page-content
 
 .page-content {
-  margin: 50px auto;
+  margin: 50px auto 30px auto;
   width: 90vw;
   // text-align: justify;
   overflow: auto;
 }
 
 .page-content a {
-  text-decoration: underline 1px solid var(--col-txt);
+  text-decoration: underline var(--line-px) solid var(--col-txt-heading);
 }
 
 .page-content h1,
@@ -460,7 +466,7 @@ pre {
 
 footer {
   border-top: var(--line-border);
-  margin: 50px 0 100px 0;
+  margin: 30px 0 100px 0;
   padding: 50px 0;
   font-size: 0.9em;
 }
@@ -505,4 +511,75 @@ footer {
 hr {
   border: none;
   border-top: var(--line-border);
+}
+
+
+.footnotes {
+  margin-top: 60px;
+  border-top: var(--line-border);
+  border-bottom: var(--line-border);
+  font-size: 0.8em;
+}
+
+.footnotes::before {
+  content: ".Footnotes:";
+  display: block;
+  font-weight: bold;
+  font-size: 0.9em;
+  letter-spacing: 0.25em;
+  text-transform: lowercase;
+  margin: 1.5em auto;
+}
+
+.footnotes li {
+  font-weight: bold;
+}
+
+.footnotes p {
+  font-weight: 300;
+}
+
+abbr {
+  // text-decoration: var(--line-px) dashed underline var(--col-txt-heading);
+}
+
+blockquote {
+  font-size: 0.9em;
+  margin: 0;
+  font-style: italic;
+  padding: 0 1em;
+  color: var(--col-txt-highlight);
+  border-left: var(--border-radius) solid var(--col-bg-highlight);
+}
+
+.tagcloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  line-height: 1em;
+  margin-top: 30px;
+}
+.tag {
+  // font-family: 'Roboto Mono', monospace;
+  font-size: 60%;
+  // letter-spacing: 0.1em;
+  flex: 0 1 auto;
+  padding: 0.25em 0.5em;
+  border: var(--line-border);
+  text-align: center;
+  text-decoration: none !important;
+  border-radius: var(--border-radius);
+
+}
+.tag:hover {
+  border-color: var(--col-txt-hover);
+}
+.tag, .tag:visited {
+  color: var(--col-txt);
+}
+
+.center {
+  margin: auto;
+  text-align: center !important;
 }

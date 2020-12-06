@@ -20,6 +20,13 @@ kramdown:
     block:
       default_lang: php
 
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "page"
+
 collections:
   projects:
     output: true
