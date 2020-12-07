@@ -4,6 +4,7 @@
 // @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 // @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@import "icomoon";
 
 // --->
 :root {
@@ -90,7 +91,6 @@
 }
 
 html,body {
-  word-break: break-all;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -373,6 +373,8 @@ section h2 {
 .page-content h5,
 .page-content h6 {
   color: var(--col-txt-heading);
+  word-break: break-all;
+
 }
 
 .page-content h1 {
@@ -522,12 +524,8 @@ hr {
 }
 
 .footnotes::before {
-  content: ".Footnotes:";
+  content: "Footnotes:";
   display: block;
-  font-weight: bold;
-  font-size: 0.9em;
-  letter-spacing: 0.25em;
-  text-transform: lowercase;
   margin: 1.5em auto;
 }
 
@@ -570,16 +568,52 @@ blockquote {
   text-align: center;
   text-decoration: none !important;
   border-radius: var(--border-radius);
-
 }
-.tag:hover {
+.tag:hover{
   border-color: var(--col-txt-hover);
 }
 .tag, .tag:visited {
   color: var(--col-txt);
 }
 
+
 .center {
   margin: auto;
   text-align: center !important;
 }
+
+// --->
+
+p.note,p.warn,p.error,p.info {
+  font-size: 80%;
+  line-height: 1.25em;
+  border-left: var(--line-border);
+  border-right: var(--line-border);  
+  border-color: var(--col-txt-hover);
+  border-radius: var(--border-radius);
+  border-width: 4px;
+  padding: 1em;
+  // background-color: var(--col-bg-accent);
+}
+
+p.note::before,p.warn::before,p.error::before,p.info::before {
+  font-size: 2em;
+  font-family: '#{$icomoon-font-family}';
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  float: left;
+  color: var(--col-txt);
+}
+
+p.note::before { content: $icon-new_releases; }
+p.info::before { content: $icon-lightbulb; }
+p.warn::before { content: $icon-warning; }
+p.error::before { content: $icon-error_outline; }
+// icon-block
+// icon-clear
+// icon-report
+// icon-info
+// icon-info_outline
+
+// icon-label
+// icon-label_outline

@@ -13,6 +13,7 @@ permalink: /:title
 
 kramdown:
   auto_ids: true
+  css_class   : 'syntax'
   syntax_highlighter_opts:
     default_lang: php
     span:
