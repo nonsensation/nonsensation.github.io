@@ -1,5 +1,5 @@
 ---
-layout: blog-post
+layout: post
 title: Website with GH-PAges and jekyll
 excerpt: Using Github Pages and Jekyll to build websites for every project as well as a personal one using the same skin.
 ---
@@ -45,34 +45,3 @@ Github-Pages will redirect you to a 404 page - as the filename is case sensitive
 
 
 ![Jekyll Live Reload Error](assets/img/jekyll-livereload-error.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

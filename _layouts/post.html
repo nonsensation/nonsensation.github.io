@@ -6,13 +6,15 @@ layout: default
     {{ content }}
 
     {% if page.tags != empty or page.categories != empty %}
+        {%assign tags = page.tags | sort %}
+        {%assign cats = page.categories | sort %}
         <div class="tagcloud">
-            {% for tagitem in page.tags | sort %}
+            {% for tagitem in tags %}
                 <a class="tag" href="/Tags#{{ tagitem | slugify }}">{{ tagitem }}</a>
             {% endfor %}
-            {% for tagitem in page.categories | sort %}
-            <a class="tag" href="/Categories#{{ tagitem | slugify }}">{{ tagitem }}</a>
-        {% endfor %}
+            {% for tagitem in cats %}
+                <a class="tag" href="/Categories#{{ tagitem | slugify }}">{{ tagitem }}</a>
+            {% endfor %}
         </div>
     {% endif %}
 </div>
