@@ -1,14 +1,12 @@
-
 <footer>
     <div class="flexbox">
         <div class="box">
             <div class="top">Find me on:</div>
             <div class="bot">
                 {% for item in site.data.social %}
-                    <a class="social" href="{{item.url}}" title="{{item.url}}">
-                        <span class="dot col-{{item.color}}">.</span>
-                        {{item.text}}
-                    </a>
+                <a class="social" href="{{item.url}}" title="{{item.url}}">
+                    <i class="{{item.icon}}"></i>
+                </a>
                 {% endfor %}
             </div>
         </div>
@@ -16,36 +14,57 @@
             <a class="top" href="/Tags">Tags</a>
             <a class="bot" href="/Categories">Categories</a>
         </div> -->
-        <div class="box">
+        <!-- <div class="box">
             <div class="top">Contact me:</div>
             <a class="bot" href="mailto://{{site.author.email}}">{{site.author.email}}</a>
+        </div> -->
+        <div class="box">
+            <div class="top">Choose a different font:</div>
+            <div class="bot">
+                <select id="toggle-font">
+                    <option value="Comfortaa" style="font-family: 'Comfortaa'">Comfortaa</option>
+                    <option value="Montserrat" style="font-family: 'Montserrat', sans-serif">Montserrat</option>
+                    <option value="Open Sans" style="font-family: 'Open Sans', sans-serif">Open Sans</option>
+                    <option value="Computer Modern Sans" style="font-family: 'Computer Modern Sans', sans-serif">
+                        Computer Modern Sans</option>
+                    <option value="Computer Modern Serif" style="font-family: 'Computer Modern Serif', serif">Computer
+                        Modern Serif</option>
+                </select>
+            </div>
         </div>
     </div>
 </footer>
 
 <script type="text/javascript" lang="javascript">
 
-const toggleSwitch = document.querySelector('.toggle-theme input[type="checkbox"]');
-const currentTheme = localStorage.getItem('theme');
+    const toggleTheme = document.querySelector('.toggle-theme input[type="checkbox"]');
+    const fontSelect = document.querySelector('#toggle-font');
 
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-  
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
+    const currentTheme = localStorage.getItem('theme');
+    const currentFont = localStorage.getItem('font');
+
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        toggleTheme.checked = currentTheme === 'dark';
     }
-}
 
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
+    if (currentFont) {
+        document.documentElement.setAttribute('data-font', currentFont);
+        fontSelect.value = currentFont;
     }
-    else {        
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }    
-}
 
-toggleSwitch.addEventListener('change', switchTheme, false);
+    function switchTheme(e) {
+        var t = e.target.checked ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        localStorage.setItem('theme', t);
+    }
+
+    function switchFont(e) {
+        document.documentElement.setAttribute('data-font', e.target.value);
+        localStorage.setItem('font', e.target.value);
+    }
+
+    toggleTheme.addEventListener('change', switchTheme, false);
+    fontSelect.addEventListener('change', switchFont, false);
+
 </script>

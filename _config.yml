@@ -12,6 +12,7 @@ author:
 permalink: /:title
 
 kramdown:
+  parse_block_html: true
   auto_ids: true
   css_class   : 'syntax'
   syntax_highlighter_opts:

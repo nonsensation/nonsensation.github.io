@@ -1,16 +1,16 @@
 
-- text: yt
+- text: "YouTube"
   url: https://youtube.com/nonsensation
-  color: red
+  icon: "fab fa-youtube"
 
-- text: gh
+- text: "GitHub"
   url: https://github.com/nonsensation
-  color: orange
+  icon: "fab fa-github"
 
-- text: ttv
+- text: "Twitch"
   url: https://twitch.tv/nonsensation
-  color: magenta
+  icon: "fab fa-twitch"
 
-- text: tw
+- text: "Twitter"
   url: https://twitter.com/_nonsensation
-  color: cyan
+  icon: "fab fa-twitter"

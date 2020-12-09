@@ -8,11 +8,11 @@ This website aims to be as user friendly as possible.
 - This website does **not** use Cookies or other tracking methods and also doesn't collect any data about its users.
 - No advertisements for external products or services.
 - No annoying popups or overlays.
-- No third-party profiling services like Google Analytics are used.
 - Some external links, for example embedded YouTube videos, might store Cookies on their own.
 - To control non-sensitive data [local storage](https://www.w3schools.com/html/html5_webstorage.asp) is used. This data is saved in the browser, which means stored information will **not** be send to the server and also does not hold information to uniquely identify a user.  
 Currently the following data is stored this way:
   - the selected light or dark theme
+  - the selected font
 
 ### Contact
 
@@ -20,7 +20,11 @@ E-Mail: 3li@nonsensation.com
 
 ### Sources for this website
 
-- [Google Fonts (Comfortaa)](https://fonts.google.com/specimen/Comfortaa)
+- Fonts & Iconfonts:
+  - [Google Fonts](https://fonts.google.com/specimen/Comfortaa)
+  - [Icomoon](https://icomoon.io/)
+  - [FontAwesome](https://fontawesome.com/)
+  - [Computer Modern Webfont](https://stackoverflow.com/a/63045902/11341498)
 - [MathJax](https://www.mathjax.org/)
 - [Github Pages](https://pages.github.com/) & [Jekyll](https://jekyllrb.com/)
 
