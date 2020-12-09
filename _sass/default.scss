@@ -363,10 +363,6 @@ img {
   border-radius: var(--border-radius);
 }
 
-.page-content {
-  // overflow-x: hidden;
-}
-
 table {
   border-radius: var(--border-radius) / var(--border-radius);
   border: var(--line-border);
@@ -374,10 +370,10 @@ table {
   font-size: 0.9em;
   display: block;
   max-width: fit-content;
+  max-width: -moz-fit-content;
   margin: 0 auto;
   overflow-x: auto;
   white-space: nowrap;
-
   thead th,
   tbody:not(:last-child) tr:last-child td {
     border-bottom: var(--line-border);
@@ -395,10 +391,8 @@ th {
   }
 }
 tr {
-  overflow-x: scroll;
   &:hover {
-    // background-color: var(--col-bg-accent);
-    box-shadow: inset 0 0 0 0.5px var(--col-txt);
+    background-color: var(--col-bg-accent);
   }
   td {
     padding: 0.5em;
@@ -602,8 +596,7 @@ select {
   border-radius: var(--border-radius);
   border: var(--line-border);
   cursor: pointer;
-  width: 110%;
-  min-width: 110%;
+  width: 100%;
 	margin: 0;
 
 	background-color: var(--col-bg);
@@ -655,4 +648,9 @@ details.toc {
     width: 100%;
     height: 100%;
   }
+}
+
+
+* {
+  // border: 1px solid #f00 !important;
 }
