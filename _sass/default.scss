@@ -30,11 +30,28 @@
   --col-txt-hover: teal;
   --col-txt-highlight: dimgrey;
 
+  --col-good: green;
+  --col-bad: red;
+
   --line-px: 1px;
   --line-border: var(--line-px) solid var(--col-accent);
-  --border-radius: 3px;
+  --border-radius: 4px;
 
   --font: "Comfortaa";
+  --code-font: 'Source Code Pro', monospace;
+
+  // font-family: 'Roboto Mono', monospace;
+  // font-family: 'Inconsolata', monospace;
+  // font-family: 'Source Code Pro', monospace;
+  // font-family: 'JetBrains Mono', monospace;
+  // font-family: 'Space Mono', monospace;
+  // font-family: 'PT Mono', monospace;  
+  // font-family: 'Anonymous Pro', monospace;
+  // font-family: 'Ubuntu Mono', monospace;
+  // font-family: 'Fira Code', monospace;
+  // font-family: 'Fira Mono', monospace;
+  // font-family: 'Lucida Console', monospace;
+  // font-family: 'Source Code Pro', monospace;
 }
 
 [data-theme="light"] {
@@ -400,20 +417,7 @@ tr {
 }
 
 code {
-  // font-family: 'Roboto Mono', monospace;
-  // font-family: 'Inconsolata', monospace;
-  // font-family: 'Source Code Pro', monospace;
-  // font-family: 'JetBrains Mono', monospace;
-  // font-family: 'Space Mono', monospace;
-  // font-family: 'PT Mono', monospace;  
-  // font-family: 'Anonymous Pro', monospace;
-  // font-family: 'Ubuntu Mono', monospace;
-  // font-family: 'Fira Code', monospace;
-  // font-family: 'Fira Mono', monospace;
-  // font-family: 'Lucida Console', monospace;
-
-  font-family: 'Source Code Pro', monospace;
-
+  font-family: var(--code-font);
   font-size: 0.75em;
   letter-spacing: normal;
 }
@@ -650,7 +654,61 @@ details.toc {
   }
 }
 
+.highlighter-rouge,
+.good, .bad {
+  position: relative;
 
-* {
-  // border: 1px solid #f00 !important;
+  &::before,
+  &[data-lang]::after {
+    position: absolute;
+    top: 0;
+    border: var(--line-border);
+    border-radius: var(--border-radius);
+    padding: 5px 10px;
+    font-size: 75%;
+    line-height: 100%;
+    background-color: var(--col-bg);
+    transform: translateY(-50%);
+  }
+
+  &[data-lang]::after {
+    content: attr(data-lang);
+    font-family: var(--code-font);
+    padding: 5px 10px;
+    text-transform: uppercase;
+    right: 1em;
+  }
+
+  &::before {
+    font-family: 'Icomoon';
+    padding: 5px;
+    left: 1em;
+  }
+}
+
+.good {
+  &::before {
+    content: $icon-check;
+    border-width: 2px;
+    border-color: var(--col-good);
+    // color: var(--col-bg);
+    // color: var(--col-good);
+    // background-color: var(--col-good);
+  }
+  pre {
+    // border-color: var(--col-good);
+  }
+}
+.bad {
+  &::before {
+    content: $icon-block;
+    // color: var(--col-bad);
+    // background-color: var(--col-bad);
+    // color: var(--col-bg);
+    border-color: var(--col-bad);
+    border-width: 2px;
+  }
+  pre {
+    // border-color: var(--col-bad);
+  }
 }

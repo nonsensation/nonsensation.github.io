@@ -12,15 +12,20 @@ author:
 permalink: /:title
 
 kramdown:
+  input: GFM
+  syntax_highlighter: rouge
   parse_block_html: true
   auto_ids: true
   css_class   : 'syntax'
   syntax_highlighter_opts:
-    default_lang: php
+    default_lang: text
     span:
       default_lang: text
+      line_numbers: false
     block:
-      default_lang: php
+      default_lang: text
+      line_numbers: false
+      start_line: 1
 
 defaults:
   -
