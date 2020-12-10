@@ -282,18 +282,22 @@ header {
 
 .card, .page-content { max-width: 100%; }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
   /* tablets and desktop */
-  .card, .page-content { max-width: 90%; }
+  .card, .page-content { max-width: 75%; }
 }
-@media only screen and (max-width: 767px) {
-  /* phones */
-  .card, .page-content { max-width: 100%; }
-}
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-  /* portrait phones */
-  .card, .page-content { max-width: 100%; }
-}
+// @media only screen and (min-width: 1280px) {
+//   /* tablets and desktop */
+//   .card, .page-content { max-width: 75%; }
+// }
+// @media only screen and (max-width: 767px) {
+//   /* phones */
+//   .card, .page-content { max-width: 100%; }
+// }
+// @media only screen and (max-width: 767px) and (orientation: portrait) {
+//   /* portrait phones */
+//   .card, .page-content { max-width: 100%; }
+// }
 
 
 .card-txt,
@@ -345,7 +349,8 @@ section h2 {
   margin: 2.5em auto 1.5em auto;
   width: 90vw;
   // text-align: justify;
-  overflow: auto;
+
+  overflow: visible;
 
   a {
     text-decoration: underline var(--line-px) solid var(--col-txt-heading);
@@ -440,17 +445,18 @@ tr {
 
 code {
   font-family: var(--code-font);
-  font-size: 0.75em;
+  // font-size: 0.75em;
   letter-spacing: normal;
 }
 
 pre {
+  font-size: 0.8em;
   background-color: transparent;
   border: var(--line-border);
-  padding: 0.75em;
+  padding: 0.8em;
   overflow-x: auto;
   border-radius: var(--border-radius);
-  line-height: 1.0em;  
+  line-height: 1.25em;  
   scrollbar-color: dark;
 }
 
@@ -577,37 +583,70 @@ blockquote {
 
 // --->
 
-p.note,p.warn,p.error,p.info {
-  font-size: 90%;
-  line-height: 1.25em;
+p.note,p.warn,p.info {
+  font-family: var(--font) !important;
+  font-size: 85%;
+  line-height: 1.6em;
   border-left: var(--line-border);
   border-right: var(--line-border);  
-  border-color: var(--col-txt-hover);
   border-radius: var(--border-radius);
   border-width: var(--border-radius);
-  padding: 1em;
-  // background-color: var(--col-bg-accent);
+  border-top: var(--line-border);
+  border-bottom: var(--line-border);
+  // border-color: var(--col-bg-accent);
+  padding: 0.5em 1em;
+  position: relative;
+  background-color: var(--col-bg);
+  margin-top: 2em;
+
   &::before {
+    font-weight: normal;
     font-size: 2em;
     font-family: '#{$icomoon-font-family}';
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-    float: left;
+    line-height: 1em;
+    margin: auto 0.5em 0.5em 0;
+    // float: left;
     color: var(--col-txt);
+
+    font-size: 1.55em;
+    position: absolute;
+    right: 1em;
+    top: 0;
+    background-color: var(--col-bg-accent);
+    background-color: var(--col-bg);
+    border: var(--line-border);
+    border-radius: var(--border-radius);
+    padding: 0.25em;
+    transform: translateY(-50%);
+  }
+
+  &[title]::after {
+    content: attr(title);
+    position: absolute;
+    font-family: var(--font) !important;
+    font-size: 1.1em;
+    font-weight: bold;
+    top: 0.6em;
+    left: 0.8em;
+    // text-decoration: 2px solid underline black;
+    // background-color: grey;
+  }
+
+  &[title] {
+    padding-top: 2.5em;
   }
 }
-p.note::before { content: $icon-new_releases; }
-p.info::before { content: $icon-lightbulb; }
-p.warn::before { content: $icon-warning; }
-p.error::before { content: $icon-error_outline; }
+
+p.info::before { content: $icon-lightbulb_outline; }
+p.warn::before { content: $icon-error_outline; }
+
 // icon-block
 // icon-clear
 // icon-report
 // icon-info
 // icon-info_outline
-
-// icon-label
-// icon-label_outline
+// icon-help_outline
+// icon-remove_circle_outline
 
 select {
 	-moz-appearance: none;
@@ -703,7 +742,7 @@ details.toc {
   }
 
   &::before {
-    font-family: 'Icomoon';
+    font-family: '#{$icomoon-font-family}';
     padding: 5px;
     left: 1em;
   }
@@ -712,7 +751,7 @@ details.toc {
 .good {
   &::before {
     content: $icon-check;
-    border-width: 2px;
+    // border-width: 2px;
     border-color: var(--col-good);
     // color: var(--col-bg);
     // color: var(--col-good);
@@ -729,7 +768,7 @@ details.toc {
     // background-color: var(--col-bad);
     // color: var(--col-bg);
     border-color: var(--col-bad);
-    border-width: 2px;
+    // border-width: 2px;
   }
   pre {
     // border-color: var(--col-bad);
