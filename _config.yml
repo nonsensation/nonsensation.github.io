@@ -24,8 +24,8 @@ kramdown:
       line_numbers: false
     block:
       default_lang: text
-      line_numbers: false
-      start_line: 1
+      # line_numbers: false
+      # start_line: 1
 
 defaults:
   -
