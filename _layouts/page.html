@@ -3,5 +3,15 @@ layout: default
 ---
 
 <div class="page-content">
+    
+    {% if page.toc != false %}
+        <details class="toc">
+            <summary markdown="span">Table of Contents</summary>
+        
+            {% include toc.html html=content %}
+        
+        </details>
+      {% endif %}
+
     {{ content }}
 </div>

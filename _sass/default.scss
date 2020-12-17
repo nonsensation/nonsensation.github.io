@@ -347,10 +347,10 @@ section h2 {
 
 .page-content {
   margin: 2.5em auto 1.5em auto;
-  width: 90vw;
+  width: 90%;
   // text-align: justify;
 
-  overflow: visible;
+  overflow: auto;
 
   a {
     text-decoration: underline var(--line-px) solid var(--col-txt-heading);
@@ -896,3 +896,48 @@ strong {
 //   .vi    { color: #EEFFFF } // Name.Variable.Instance
 //   .il    { color: #F78C6C } // Literal.Number.Integer.Long
 // }
+
+
+/**************************
+*          Docs           *
+**************************/
+
+.docs {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  height: 100%;
+}
+
+#docs-main {
+  padding-left: 1em;
+  flex-grow: 1;
+}
+
+#docs-toc {
+  font-size: var(--code-font-size);
+  overflow-y: auto;
+  flex-shrink: 0;
+  flex-grow: 1;
+  height: calc( 100vh - 2em );
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1em;
+  padding-right: 1em;
+  margin: 1em 0 2em 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .docs {
+    flex-direction: column;
+  }
+  #docs-toc {
+    margin: 2.5em auto 1.5em auto;
+    padding: 0 1em;
+    width: 90%;
+    height: 60vh;
+    border: var(--line-border);
+    border-radius: var(--border-radius);
+    position: relative;
+  }
+}
