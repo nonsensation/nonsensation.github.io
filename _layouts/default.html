@@ -14,11 +14,11 @@
             {{ content }}
           {% else %}
             {% include anchor_headings.html
-              beforeHeading=false
+              beforeHeading=true
               h_min=2
               html=content
               anchorClass="permalink icon-link"
-              anchorBody=" "
+              anchorBody=""
               anchorTitle="Permalink"
             %}
           {% endif %}

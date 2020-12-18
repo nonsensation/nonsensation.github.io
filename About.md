@@ -1,6 +1,7 @@
 ---
 layout: page
 permalinks: false
+toc: false
 ---
 
 
