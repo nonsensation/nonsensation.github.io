@@ -141,6 +141,9 @@ html,body {
   padding: 0;
   width: 100%;
   height: 100%;
+
+  box-sizing: border-box;
+
   font-family: "Comfortaa";
   font-family: "Montserrat", sans-serif;
   font-family: 'Open Sans', sans-serif;
@@ -176,7 +179,7 @@ a {
 // ---> main
 
 main {
-  min-height: 80vh;
+  // min-height: 80vh;
 }
 
 body {
@@ -284,9 +287,30 @@ header {
   margin: 1em auto;
   // background-color: #181818;
 
+  border-color: var(--col-txt-highlight);
+
+  position: relative;
+  &::before {
+    content:'';
+    position:absolute;
+    top:-1px;
+    left:-1px;
+    border:1px solid var(--col-bg);
+    height:100%;
+    width:100%;
+    opacity: 1;
+    border-radius: 1.5em;
+  }
+
   &:hover {
+    text-decoration: none !important;
     // box-shadow: inset 0px 0px 15px var(--col-txt-hover);
     border-color: var(--col-txt-highlight);
+
+    &::before {
+      opacity: 0;
+      // transition: 0.25s;
+    }
   }
 }
 
@@ -319,7 +343,6 @@ header {
 }
 
 .card a {
-  text-decoration: none;
   color: var(--col-txt-heading);
   margin: auto;
 }
@@ -359,7 +382,7 @@ header {
   text-align: left;
   margin: 2.5em auto 1.5em auto;
   width: 90%;
-  overflow: auto;
+  // overflow: visible;
 
   a {
     text-decoration: underline var(--line-px) solid var(--col-txt-heading);
@@ -407,9 +430,10 @@ header {
 
   h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
     a.permalink {
-      font-size: var(--code-font-size);
+      // font-size: var(--code-font-size);
       position: absolute;
-      left: 0.25em;
+      transform: translateX(0.25em);
+      // right: 100%;
       opacity: 0;
     }
     &:hover {
@@ -935,7 +959,7 @@ strong {
 .docs {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  // min-height: 50vh;
 }
 
 #docs-main {
@@ -955,11 +979,10 @@ strong {
     font-weight: bold;
     border: none;
   }
-  // font-size: var(--code-font-size);
   overflow-y: auto;
   flex-shrink: 0;
-  // flex-grow: 1;
-  height: calc( 100vh - 2em );
+  flex-grow: 0;
+  max-height: calc( 100vh - 2em );
   position: -webkit-sticky;
   position: sticky;
   top: 1em;
@@ -984,8 +1007,9 @@ strong {
     flex-direction: column;
   }
   #docs-toc {
+    position: relative;
+    box-sizing: border-box;
     padding: 0 1em 1em 1em;
-    width: 90%;
     height: 100%;
     max-height: 60vh;
     border: var(--line-border);
@@ -993,6 +1017,7 @@ strong {
     position: relative;
     header {
       font-size: 1.25em;
+      text-align: left;
     }
   }
   #docs-main {
