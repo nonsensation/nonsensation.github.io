@@ -109,8 +109,15 @@
 :focus {outline:none !important;}
 
 // --->
-*,:root{
-  scrollbar-color: var(--col-txt-hover) var(--col-bg-accent);
+:root{
+  scrollbar-color: var(--col-txt-highlight) var(--col-bg) !important;
+}
+* {
+  scrollbar-width: thin !important;
+}
+html, main, body {
+  // scrollbar-color: var(--col-txt-hover) var(--col-bg);
+  scrollbar-width: auto !important;
 }
 
 *::-webkit-scrollbar {
@@ -161,8 +168,8 @@ a {
     color: var(--col-txt);
   }
   &:hover {
-    text-shadow: 0.5px 0 0 currentColor;
     color: var(--col-txt-hover) !important;
+    text-decoration: 1px solid underline currentColor;
   }
 }
 
@@ -179,7 +186,7 @@ body {
 }
 
 .wrapper {
-  width: 90vw;
+  width: 94vw;
   grid-template-rows: auto 1fr auto;
 }
 
@@ -202,7 +209,7 @@ header {
   
   .title {
     text-decoration: none;
-    color: var(--col-txt-heading);
+    // color: var(--col-txt-heading);
     font-size: clamp(0.01em,6vw,1.5em);
     font-weight: 300;
     letter-spacing: 0.75em;
@@ -226,6 +233,9 @@ header {
   .link {
     color: var(--col-txt-heading);
     font-weight: 500;
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   #toggle-theme {
@@ -336,7 +346,7 @@ header {
   width: auto !important;
 }
 
-section h2 {
+.projects h2 {
   text-align: center;
   font-weight: 400;
   font-size: 1.5em;
@@ -346,10 +356,9 @@ section h2 {
 // ---> page-content
 
 .page-content {
+  text-align: left;
   margin: 2.5em auto 1.5em auto;
   width: 90%;
-  // text-align: justify;
-
   overflow: auto;
 
   a {
@@ -358,16 +367,14 @@ section h2 {
 
   h1,h2,h3,h4,h5,h6 {
     color: var(--col-txt-heading);
+    // word-break: break-all;
     line-height: 100%;
-    word-break: break-all;
   }
   h1 {
     margin: 2em auto;
     font-size: 2.0em;
     font-weight: 900;
-    // text-align: center;
     letter-spacing: 0.25em;
-
   }
   h2 {
     margin: 2em auto;
@@ -394,6 +401,22 @@ section h2 {
     font-weight: 500;
     font-size: 0.9em;
     margin: 0.5em auto;
+  }
+
+  position: relative;
+
+  h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
+    a.permalink {
+      opacity: 0;
+    }
+    &:hover {
+      a.permalink {
+        text-decoration: none;
+        text-decoration-color: var(--col-txt-hover);
+        color: currentColor;
+        opacity: 1;  
+      }
+    }
   }
 }
 
@@ -902,29 +925,55 @@ strong {
 *          Docs           *
 **************************/
 
+.page-content.docs {
+  max-width: 100% !important;
+}
+
 .docs {
   display: flex;
   flex-direction: row;
-  max-width: 100%;
   height: 100%;
 }
 
 #docs-main {
+  margin-left: 0.1em;
   padding-left: 1em;
+  border-left: var(--line-border);
   flex-grow: 1;
 }
 
+@-moz-document url-prefix() { 
+  #docs-main {
+    // border: none;
+  }
+}
 #docs-toc {
-  font-size: var(--code-font-size);
+  header {
+    font-weight: bold;
+    border: none;
+  }
+  // font-size: var(--code-font-size);
   overflow-y: auto;
   flex-shrink: 0;
-  flex-grow: 1;
+  // flex-grow: 1;
   height: calc( 100vh - 2em );
   position: -webkit-sticky;
   position: sticky;
   top: 1em;
   padding-right: 1em;
-  margin: 1em 0 2em 0;
+  margin: 2.5em 0 1.5em 0;
+}
+
+#toc {
+  font-size: var(--code-font-size);
+
+  ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 1em;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -932,12 +981,23 @@ strong {
     flex-direction: column;
   }
   #docs-toc {
-    margin: 2.5em auto 1.5em auto;
-    padding: 0 1em;
+    padding: 0 1em 1em 1em;
     width: 90%;
-    height: 60vh;
+    height: 100%;
+    max-height: 60vh;
     border: var(--line-border);
     border-radius: var(--border-radius);
     position: relative;
+    header {
+      font-size: 1.25em;
+    }
+  }
+  #docs-main {
+    padding: 0;
+    margin: 0 auto;
+    border: none;
+  }
+  #toc {
+    font-size: 1em;
   }
 }

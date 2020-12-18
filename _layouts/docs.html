@@ -3,10 +3,12 @@ layout: default
 ---
 
 <div class="docs">
-    <section id="docs-toc">
+    <aside id="docs-toc">
         <header>Table of Contents</header>
-        {% include toc.html html=content %}
-    </section>
+        <div id="toc">
+            {% include toc.html sanitize=true html=content h_min=2 %}
+        </div>
+    </aside>
 
     <section class="page-content" id="docs-main">
         {{ content }}

@@ -1,5 +1,6 @@
 ---
 layout: page
+permalinks: false
 ---
 
 
@@ -20,6 +21,9 @@ E-Mail: 3li@nonsensation.com
 
 ### Sources for this website
 
+- Pure Liquid Templates from [allejo (Vladimir Jimenez)](https://github.com/allejo)
+  - [Anchor Headings](https://github.com/allejo/jekyll-anchor-headings)
+  - [TOC](https://github.com/allejo/jekyll-toc)
 - Fonts & Iconfonts:
   - [Google Fonts](https://fonts.google.com/specimen/Comfortaa)
   - [Icomoon](https://icomoon.io/)
