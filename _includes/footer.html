@@ -45,6 +45,8 @@
         document.documentElement.setAttribute('data-theme', currentTheme);
         toggleTheme.checked = currentTheme === 'dark';
     }
+    else
+        toggleTheme.checked = true;
 
     if (currentFont) {
         document.documentElement.setAttribute('data-font', currentFont);
