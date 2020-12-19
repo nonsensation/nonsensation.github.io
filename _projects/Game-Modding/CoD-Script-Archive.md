@@ -5,10 +5,7 @@ is_project_base: false
 
 title: Call of Duty Script Archive
 ext_url: https://github.com/nonsensation/CoDScriptArchive
-color: slategrey
 img_url: 
-excerpt: >
+description: >
   A collection of vanilla Call of Duty game scripts (GSC)
 ---
-
-

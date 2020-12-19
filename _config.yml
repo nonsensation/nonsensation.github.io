@@ -20,7 +20,7 @@ kramdown:
   syntax_highlighter: rouge
   parse_block_html: true
   auto_ids: true
-  css_class   : 'syntax'
+  css_class: 'syntax'
   syntax_highlighter_opts:
     default_lang: text
     span:

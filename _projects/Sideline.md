@@ -9,11 +9,10 @@ update_date: 2020-11-29
 
 order: 1
 
-intro: "Sideline : Scoreboard"
 title: Sideline
-color: lime
-img_url:
-excerpt: >
+
+img_url: 
+description: >
   A scoreboard for streaming sports events.
   Currently supports OBS Streaming Software.
   Uses HTML & CSS to display the scoreboard
