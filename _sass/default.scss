@@ -160,7 +160,7 @@ html,body {
 
   font-weight: 400;
   // font-size: 18px;
-  font-size: calc(1rem + 0.3vw );
+  font-size: calc(1rem + 0.2vw );
  
   // transition: all 0.5s;
 
@@ -294,30 +294,12 @@ header {
   margin: 1em auto;
   // background-color: #181818;
 
-  border-color: var(--col-txt-highlight);
-
-  position: relative;
-  &::before {
-    content:'';
-    position:absolute;
-    top:-2px;
-    left:-2px;
-    border: 2px solid var(--col-bg);
-    height:100%;
-    width:100%;
-    opacity: 1;
-    border-radius: 1.5em;
-  }
+  border-color: var(--col-bg-accent);
 
   &:hover {
     text-decoration: none !important;
     // box-shadow: inset 0px 0px 15px var(--col-txt-hover);
     border-color: var(--col-txt-highlight);
-
-    &::before {
-      opacity: 0;
-      // transition: 0.25s;
-    }
   }
 }
 
@@ -397,8 +379,10 @@ header {
 
   h1,h2,h3,h4,h5,h6 {
     color: var(--col-txt-heading);
-    // word-break: break-all;
-    line-height: 100%;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    line-height: 150%;
   }
   h1 {
     margin: 2em 0;

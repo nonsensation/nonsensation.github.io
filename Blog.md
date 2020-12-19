@@ -1,5 +1,6 @@
 ---
 layout: home-blog
+title: Blog
 ---
 
 {% assign items = site.posts %}

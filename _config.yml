@@ -11,6 +11,10 @@ author:
 
 permalink: /:title
 
+url: "https://www.nonsensation.com"
+plugins:
+  - jekyll-sitemap
+
 kramdown:
   input: GFM
   syntax_highlighter: rouge
