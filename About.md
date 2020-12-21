@@ -5,23 +5,29 @@ permalinks: false
 toc: false
 ---
 
+# About 
+
+## General 
 
 This website aims to be as user friendly as possible.
 
 - This website does **not** use Cookies or other tracking methods and also doesn't collect any data about its users.
+- Some external links, for example embedded YouTube videos, might use Cookies on their own.
 - No advertisements for external products or services.
-- No annoying popups or overlays.
-- Some external links, for example embedded YouTube videos, might store Cookies on their own.
-- To control non-sensitive data [local storage](https://www.w3schools.com/html/html5_webstorage.asp) is used. This data is saved in the browser, which means stored information will **not** be send to the server and also does not hold information to uniquely identify a user.  
-Currently the following data is stored this way:
-  - the selected light or dark theme
-  - the selected font
+- No disrupting popups or overlays.
+- To control non-sensitive data, [local storage](https://www.w3schools.com/html/html5_webstorage.asp) is used. This data is saved in the browser, which means stored information will **not** be send to a server. Stored Data does not hold information to uniquely identify a user.  
+Currently the following data is saved this way:
+  - the selected light or dark theme,
+  - the selected font.
 
-### Contact
+## Contact
 
-E-Mail: 3li@nonsensation.com
+You can contact me via:  
+<i class="fab fa-twitter"></i> [Twitter](https://twitter.com/_nonsensation)  
+<i class="fab fa-github"></i> [GitHub](https://github.com/nonsensation)  
+<i class="fas fa-envelope"></i> [Email: 3li@nonsensation.com](mailto:3li@nonsensation.com)
 
-### Sources for this website
+## Sources for this website
 
 - Pure Liquid Templates from [allejo (Vladimir Jimenez)](https://github.com/allejo)
   - [Anchor Headings](https://github.com/allejo/jekyll-anchor-headings)

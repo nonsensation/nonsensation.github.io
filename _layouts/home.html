@@ -2,14 +2,14 @@
 layout: default
 ---
 
-{% include intro.html %}
-
-{% assign items = site.posts | slice: 0 , 2 %}
+{% assign items = site.posts | slice: 0 , 4 %}
 {% assign item_title = "Latest Blog Posts" %}
 {% include itemroll.html %}
 
 <div class="vertical"></div>
 
-{% assign items = site.projects | where: "is_project_base" , true | slice: 0 , 2 %}
+{% assign items = site.projects | where: "is_project_base" , true | slice: 0 , 4 %}
 {% assign item_title = "Latest Projects" %}
 {% include itemroll.html %}
+
+<div class="vertical"></div>
