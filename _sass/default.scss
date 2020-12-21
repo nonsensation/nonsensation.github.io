@@ -125,6 +125,7 @@
 html, main, body {
   // scrollbar-color: var(--col-txt-hover) var(--col-bg);
   scrollbar-width: auto !important;
+  -webkit-tap-highlight-color:  transparent; 
 }
 
 *::-webkit-scrollbar {
@@ -280,6 +281,7 @@ header {
 // ---> cards
 
 .card-list {
+  user-select: none;
   display: flex;
   flex-wrap: wrap;
   gap: min(5%, 2.5em);
@@ -310,22 +312,22 @@ header {
 
   &:hover {
     text-decoration: none !important;
-    // box-shadow: inset 0px 0px 15px var(--col-txt-hover);
+    box-shadow: inset 0px 0px 2.5em var(--col-txt-highlight);
     border-color: var(--col-txt-hover);
-    transition: 0.5s ease;
+    transition: 0.5s;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
   }
-  transition: 0.5s ease;
+  transition: 0.5s;
 
   -webkit-mask-image: url(/assets/mask6.png);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
-  -webkit-mask-size: 95% 95%;
+  -webkit-mask-size: 92% 92%;
   mask-image: url(/assets/mask6.png);
   mask-repeat: no-repeat;
   mask-position: center;
-  mask-size: 95% 95%;
+  mask-size: 92% 92%;
 
   background-color: var(--col-bg-accent);
 }
