@@ -1,7 +1,5 @@
 ---
 layout: project
-project: "game-modding"
-is_project_base: false
 
 title: Call of Duty 2 Shaders
 ext_url: https://github.com/nonsensation/CoD2-Shader

@@ -314,11 +314,11 @@ header {
     text-decoration: none !important;
     box-shadow: inset 0px 0px 2.5em var(--col-txt-highlight);
     border-color: var(--col-txt-hover);
-    transition: 0.5s;
+    transition: 0.25s;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
   }
-  transition: 0.5s;
+  transition: 0.25s;
 
   -webkit-mask-image: url(/assets/mask6.png);
   -webkit-mask-repeat: no-repeat;
@@ -692,16 +692,28 @@ details.toc {
   font-size: var(--code-font-size);
   line-height: 1.25em;
   border: var(--line-border);
-  border-left: 0.5em solid var(--col-txt-hover);
+  // border-left: 0.5em solid var(--col-txt-hover);
+  max-height: 50vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   border-radius: var(--border-radius);
   padding: 1em;
 
   summary {
     // padding: 1em;
     cursor: pointer;
+    font-weight: bold;
   }
 
   #markdown-toc {
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: 1px solid underline var(--col-txt-hover);
+    }
   }
 
   // max-height: 33vh;

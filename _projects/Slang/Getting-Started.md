@@ -1,7 +1,7 @@
 ---
 layout: docs
 
-title: Documentation
+title: "Getting Started"
 description: >
   Getting started, FAQ & HowTo's
 ---

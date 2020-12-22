@@ -1,12 +1,10 @@
 ---
+draft: true
 layout: project
 
-is_project_base: true
-project: game-modding
-
+prj: true
 publish_date: 2020-10-29
 update_date: 2020-11-29
-
 order: 3
 
 title: Game Modding
