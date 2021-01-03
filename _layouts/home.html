@@ -2,16 +2,31 @@
 layout: default
 ---
 
-{% assign items = site.posts | slice: 0 , 2 %}
-{% assign item_title = "Latest Blog Posts" %}
-{% include itemroll.html %}
+<div class="page-content home">
+	{{ content }}
+</div>
 
 <div class="vertical"></div>
+
+{% assign items = site.posts | slice: 0 , 2 %}
+
+{% if items.size > 0 %}
+
+    {% assign item_title = "Latest Blog Posts" %}
+    {% include itemroll.html %}
+
+    <div class="vertical"></div>
+
+{% endif %}
 
 {% include liquid-projects.html %}
 
-{% assign items = items | slice: 0 , 2 %}
-{% assign item_title = "Latest Projects" %}
-{% include itemroll.html %}
+{% if items.size > 0 %}
 
-<div class="vertical"></div>
+    {% assign items = items | slice: 0 , 2 %}
+    {% assign item_title = "Latest Projects" %}
+    {% include itemroll.html %}
+
+    <div class="vertical"></div>
+
+{% endif %}
