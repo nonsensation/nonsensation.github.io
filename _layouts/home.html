@@ -8,7 +8,9 @@ layout: default
 
 <div class="vertical"></div>
 
-{% assign items = site.posts | slice: 0 , 2 %}
+{% assign items = site.posts
+    | where_exp: "item" , "item.draft != true"
+	| slice: 0 , 2 %}
 
 {% if items.size > 0 %}
 
