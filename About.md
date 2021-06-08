@@ -20,6 +20,9 @@ Currently the following data is saved this way:
   - the selected light or dark theme,
   - the selected font.
 
+If you have any trouble with this website, I eally appreciate you to contact me about it. I build this website myself and I am by no means fond with CSS, Javascript or HTML.
+Thank you very much :)
+
 ## Contact
 
 You can contact me via:  
