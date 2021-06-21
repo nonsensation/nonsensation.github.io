@@ -39,7 +39,7 @@
 
   --font: "Comfortaa";
   --code-font: 'Source Code Pro', monospace;
-  --code-font-size: 80%;
+  --code-font-size: 60%;
 
   // font-family: 'Roboto Mono', monospace;
   // font-family: 'Inconsolata', monospace;
@@ -855,7 +855,7 @@ pre {
   border-radius: var(--border-radius);
   padding: 0.25em 0.75em 0.5em 0.75em;
   // overflow-x: auto;
-  line-height: 1.1em;  
+  line-height: 1.25em;  
   margin: 1em auto;
 
   code {
