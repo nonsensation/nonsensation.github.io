@@ -62,6 +62,10 @@
   --x6:calc(var(--x5)*var(--x1));
 }
 
+@page { /* see: https://stackoverflow.com/questions/8228088/remove-header-and-footer-from-window-print */
+	margin: 0;
+}
+
 [data-theme="light"] {
   --col-bg: #f0f0f0;
   --col-bg-accent: #e0e0e0;
