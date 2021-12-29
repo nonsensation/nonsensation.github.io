@@ -1,4 +1,6 @@
 ---
+draft: true
+
 layout: docs
 
 title: "Slang - Specification"
