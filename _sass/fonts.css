@@ -10,3 +10,8 @@
 @import url(./fonts/cm-web-font/Typewriter Light/cmun-typewriter-light.css);
 @import url(./fonts/cm-web-font/Typewriter Variable/cmun-typewriter-variable.css);
 @import url(./fonts/cm-web-font/Upright Italic/cmun-upright-italic.css);
+
+@import url(./GooleFonts/OpenSans.css);
+@import url(./GooleFonts/Comfortaa.css);
+@import url(./GooleFonts/Montserrat.css);
+@import url(./GooleFonts/SourceCodePro.css);
