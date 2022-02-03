@@ -36,7 +36,7 @@ You can contact me via:
   - [Anchor Headings](https://github.com/allejo/jekyll-anchor-headings)
   - [TOC](https://github.com/allejo/jekyll-toc)
 - Fonts & Iconfonts:
-  - [Google Fonts](https://fonts.google.com/specimen/Comfortaa)
+  - [Google Fonts](https://fonts.google.com) ([Comfortaa](https://fonts.google.com/specimen/Comfortaa), [Montserrat](https://fonts.google.com/specimen/Montserrat), [Open Sans](https://fonts.google.com/specimen/Open+Sans), [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro))
   - [Icomoon](https://icomoon.io/)
   - [FontAwesome](https://fontawesome.com/)
   - [Computer Modern Webfont](https://stackoverflow.com/a/63045902/11341498)
