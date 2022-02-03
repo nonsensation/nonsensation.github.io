@@ -11,7 +11,8 @@ toc: false
 
 This website aims to be as user friendly as possible.
 
-- This website does **not** use Cookies or other tracking methods and also doesn't collect any data about its users.
+- This website does **not** use Cookies or other tracking methods and also doesn't collect any data about its users. There is no Google Analytics service linked to this website.
+- All possible resources, such as Google Fonts, MathJax, FontAwesome are hosted locally and therefore do not send data to other servers, that might get stored otherwise.
 - Some external links, for example embedded YouTube videos, might use Cookies on their own.
 - No advertisements for external products or services.
 - No disrupting popups or overlays.
@@ -20,7 +21,7 @@ Currently the following data is saved this way:
   - the selected light or dark theme,
   - the selected font.
 
-If you have any trouble with this website, I eally appreciate you to contact me about it. I build this website myself and I am by no means fond with CSS, Javascript or HTML.
+If you have any trouble with this website, I really appreciate you to contact me about it. I build this website myself and I am by no means fond with CSS, Javascript or HTML.
 Thank you very much :)
 
 ## Contact
