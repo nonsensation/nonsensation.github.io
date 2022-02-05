@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign items = site.posts  %}
+{% assign items = site.posts | where_exp: "item" , "item.draft != true" %}
 {% assign item_title = "Blog" %}
 {% include itemroll.html %}
 
