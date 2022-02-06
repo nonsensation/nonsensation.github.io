@@ -2,7 +2,12 @@
 layout: default
 ---
 
-{% assign items = site.posts | where_exp: "item" , "item.draft != true" %}
+{% if jekyll.environment == "production" %}
+  {% assign items = site.posts | where_exp: "item" , "item.draft != true" %}
+{% else if jekyll.environment == "development" %}
+  {% assign items = site.posts %}
+{% endif %}
+
 {% assign item_title = "Blog" %}
 {% include itemroll.html %}
 

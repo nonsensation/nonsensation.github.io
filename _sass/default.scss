@@ -30,14 +30,14 @@
   --col-txt-hover: teal;
   --col-txt-highlight: dimgrey;
 
-  --col-good: green;
-  --col-bad: red;
+  --col-good: 0 , 255 , 127;
+  --col-bad: 255 , 0 , 0;
 
   --line-px: 1px;
   --line-border: var(--line-px) solid var(--col-accent);
   --border-radius: 3px;
 
-  --font: "Comfortaa";
+  --font: "Montserrat";
   --code-font: 'Source Code Pro', monospace;
   --code-font-size: 60%;
 
@@ -914,8 +914,14 @@ pre {
 .bad {
   &::before {
     content: $icon-block;
-    // border-color: var(--col-bad);
   }
+}
+
+.good:hover .highlight {
+  background-color: rgba( var(--col-good) , 0.025 );
+}
+.bad:hover .highlight {
+  background-color: rgba( var(--col-bad) , 0.025 );
 }
 
 /**************************
