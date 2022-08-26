@@ -316,9 +316,7 @@ header {
 
   &:hover {
     text-decoration: none !important;
-    //box-shadow: inset 0px 0px 2.5em var(--col-txt-highlight);
-    background-color: var(--col-txt-highlight);
-    border-color: var(--col-txt-hover);
+    box-shadow: inset 0px 0px 2px var(--col-txt);
     transition: 0.25s;
     //-webkit-mask-size: 100% 100%;
     //mask-size: 100% 100%;
