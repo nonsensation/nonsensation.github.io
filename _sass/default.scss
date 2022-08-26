@@ -316,22 +316,23 @@ header {
 
   &:hover {
     text-decoration: none !important;
-    box-shadow: inset 0px 0px 2.5em var(--col-txt-highlight);
+    //box-shadow: inset 0px 0px 2.5em var(--col-txt-highlight);
+    background-color: var(--col-txt-highlight);
     border-color: var(--col-txt-hover);
     transition: 0.25s;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
+    //-webkit-mask-size: 100% 100%;
+    //mask-size: 100% 100%;
   }
   transition: 0.25s;
 
-  -webkit-mask-image: url(/assets/mask6.png);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: 92% 92%;
-  mask-image: url(/assets/mask6.png);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 92% 92%;
+  //-webkit-mask-image: url(/assets/mask6.png);
+  //-webkit-mask-repeat: no-repeat;
+  //-webkit-mask-position: center;
+  //-webkit-mask-size: 92% 92%;
+  //mask-image: url(/assets/mask6.png);
+  //mask-repeat: no-repeat;
+  //mask-position: center;
+  //mask-size: 92% 92%;
 
   background-color: var(--col-bg-accent);
 }
@@ -391,14 +392,14 @@ header {
   margin: auto;
   margin-bottom: 1.5em;
 
-  -webkit-mask-image: url(/assets/mask3.png);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: 100% 100%;
-  mask-image: url(/assets/mask2.png);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 100% 100%;
+  //-webkit-mask-image: url(/assets/mask3.png);
+  //-webkit-mask-repeat: no-repeat;
+  //-webkit-mask-position: center;
+  //-webkit-mask-size: 100% 100%;
+  //mask-image: url(/assets/mask2.png);
+  //mask-repeat: no-repeat;
+  //mask-position: center;
+  //mask-size: 100% 100%;
 }
 
 .projects h1 {
