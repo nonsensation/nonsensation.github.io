@@ -40,7 +40,11 @@
             <div class="box">
                 <a class="link" href="{{item.url | relative_url}}" title="{{item.text}}">
                     <span class="dot col-{{item.color}}">.</span>
-                    {{item.text}}
+                    {% if item.icon %}
+                        {{item.icon}}
+                    {% else %}
+                        {{item.text}}
+                    {% endif %}
                 </a>
             </div>
 
