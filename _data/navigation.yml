@@ -1,6 +1,7 @@
 - text: Home
   url: /
   color: white
+  icon: icon-home
 
 - text: Projects
   url: /Projects
