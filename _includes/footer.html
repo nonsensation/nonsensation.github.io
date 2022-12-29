@@ -40,7 +40,11 @@
 
     const currentTheme = localStorage.getItem('theme');
     const currentFont = localStorage.getItem('font');
+    
+    const currentTheme_SS = sessionStorage['theme'];
+    const currentFont_SS = sessionStorage['font'];
 
+    /*
     if (currentTheme) {
         document.documentElement.setAttribute('data-theme', currentTheme);
         toggleTheme.checked = currentTheme === 'dark';
@@ -52,19 +56,69 @@
         document.documentElement.setAttribute('data-font', currentFont);
         fontSelect.value = currentFont;
     }
+    */    
+    
+    if (currentTheme_SS) {
+        document.documentElement.setAttribute('data-theme', currentTheme_SS);
+        toggleTheme.checked = currentTheme_SS === 'dark';
+    }
+    else
+        toggleTheme.checked = true;
+
+    if (currentFont_SS) {
+        document.documentElement.setAttribute('data-font', currentFont_SS);
+        fontSelect.value = currentFont_SS;
+    }
 
     function switchTheme(e) {
         var t = e.target.checked ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', t);
-        localStorage.setItem('theme', t);
+        //localStorage.setItem('theme', t);
+        sessionStorage['theme'] = t;
     }
 
     function switchFont(e) {
         document.documentElement.setAttribute('data-font', e.target.value);
-        localStorage.setItem('font', e.target.value);
+        //localStorage.setItem('font', e.target.value);
+        sessionStorage['font'] = e.target.value;
     }
 
     toggleTheme.addEventListener('change', switchTheme, false);
     fontSelect.addEventListener('change', switchFont, false);
 
+    
+function unblockVideos() {
+    document.querySelectorAll('.video_wrapper .video_trigger').forEach(function(_trigger) {
+        _trigger.style.display = 'none';
+        
+        for (var i = 0; i < _trigger.parentNode.childNodes.length; i++) {
+            var video_layer = _trigger.parentNode.childNodes[i];
+            if (video_layer.className == "video_layer") {
+                video_layer.style.display = 'block';
+
+                for (var j = 0; j < video_layer.childNodes.length; j++) {
+                    var iframe = video_layer.childNodes[j];
+                    if (iframe.tagName.toLowerCase() == 'iframe') {
+                        var videoId = _trigger.getAttribute('data-source');
+                        iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?controls=1&showinfo=0&autoplay=0&mute=1';
+                    }
+                }
+            }
+        }
+    });
+}
+document.addEventListener("DOMContentLoaded", function(event) {
+    const consent = sessionStorage['youtube-consent'];
+    if (consent && consent == 1) {
+        unblockVideos();
+    } else {
+        document.querySelectorAll('.video_wrapper .video_trigger .video-btn').forEach(function(node) {
+            node.addEventListener("click", function(event) {
+                sessionStorage['youtube-consent'] = 1;
+                unblockVideos();
+            });
+        });
+    }
+});
+    
 </script>
