@@ -91,34 +91,44 @@ function unblockVideos() {
     document.querySelectorAll('.video_wrapper .video_trigger').forEach(function(_trigger) {
         _trigger.style.display = 'none';
         
-        for (var i = 0; i < _trigger.parentNode.childNodes.length; i++) {
+        for (var i = 0; i < _trigger.parentNode.childNodes.length; i++)
+        {
             var video_layer = _trigger.parentNode.childNodes[i];
-            if (video_layer.className == "video_layer") {
-                video_layer.style.display = 'block';
+            
+            if (video_layer.className != "video_layer")
+                continue;
+            
+            video_layer.style.display = 'block';
 
-                for (var j = 0; j < video_layer.childNodes.length; j++) {
-                    var iframe = video_layer.childNodes[j];
-                    if (iframe.tagName.toLowerCase() == 'iframe') {
-                        var videoId = _trigger.getAttribute('data-source');
-                        iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?controls=1&showinfo=0&autoplay=0&mute=1';
-                    }
-                }
+            for (var j = 0; j < video_layer.childNodes.length; j++)
+            {
+                var iframe = video_layer.childNodes[j];
+                
+                console.log(iframe);
+                console.log(iframe.tagName);
+                
+                if (iframe.tagName.toLowerCase() != 'iframe')
+                    continue;
+                
+                var videoId = _trigger.getAttribute('data-source');
+                
+                iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?controls=1&showinfo=0&autoplay=0&mute=1';
             }
         }
     });
 }
 document.addEventListener("DOMContentLoaded", function(event) {
-    const consent = sessionStorage['youtube-consent'];
-    if (consent && consent == 1) {
-        unblockVideos();
-    } else {
+    //const consent = sessionStorage['youtube-consent'];
+    //if (consent && consent == 1) {
+    //    unblockVideos();
+    //} else {
         document.querySelectorAll('.video_wrapper .video_trigger .video-btn').forEach(function(node) {
             node.addEventListener("click", function(event) {
                 sessionStorage['youtube-consent'] = 1;
                 unblockVideos();
             });
         });
-    }
+    //}
 });
     
 </script>
